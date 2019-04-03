@@ -1,0 +1,125 @@
+
+{% include 'header.html' %}
+
+<!-- Page Content -->
+<section class="rightsymbolbg">
+  <div class="container">
+  <div class="row">
+    <div class="col-lg-12 text-center boderforbottm">
+      <h1 class="mt-5">Cloud Engineer</h1>
+      <p class="lead">Stay in control of systems and projects!</p>
+      <ul class="list-unstyled">
+        <li>Solution Architecture provides a tactical and targeted way to
+          deliver new technologies and capabilities to your business.
+          Architects can take advantage of industry standard frameworks
+          and centralized enterprise data in ABACUS. They can quickly understand
+          the business processes, applications and services required and design appropriate
+          solutions.</li>
+
+      </ul>
+    </div>
+    </div>
+  </div>
+</section>
+
+    <!--vertical line start-->
+<div class="outer col-md-12">
+  <div class="inner"></div>
+</div>
+  <!--vertical line end-->
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="mt-3">Most Recently used technologies! </h1>
+        <p class="lead">Stay in control of systems and projects!</p>
+      </div>
+    </div>
+  </div>
+
+
+  <section class="main-container leftsymbolbg">
+     <!--services-->
+    <div class="container-fluid ">
+      <div class="padding">
+        {% for course in courses %}
+            <div class="col-md-2 col-sm-6">
+              <div class="speciality-block-pic card-img-overlay idontknow">
+                <img src="/media/{{ course.image }}" height="50" width="50"/>
+              </div>
+              <div class="speciality-block">
+                <h4>{{ course.title }}</h4>
+                <p>{{ course.content|safe }}</p>
+                <a href="/courses/{{ course.slug }}" class="btn btn-primary">Learn More</a>
+              </div>
+            </div>
+        {% endfor %}
+      </div>
+    </div>
+
+<!--vertical line start-->
+<div class="outer col-md-12">
+  <div class="inner"></div>
+</div>
+<!--vertical line end-->
+<section id="blogs">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h1 class="mt-3">Blogs! </h1>
+          <p class="lead">Stay in a loop for latest Technologies in Market!</p>
+          <ul class="list-unstyled">
+            <!--all the recent technology card-->
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!--blog-->
+
+
+  <div class="container">
+    <div class="row">
+        {% for blog in blogs %}
+          <div class="blogview-2 card col-md-4">
+            <div class="wrapper" style="background-image: url('/media/{{ blog.image }}')">
+              <div class="header">
+                <div class="date">
+                  <span class="day">{{ blog.date_posted }}</span>
+                  <span class="month">{{ blog.date_posted }}</span>
+                  <span class="year">{{ blog.date_posted }}</span>
+                </div>
+                <ul class="menu-content">
+                  <li><a href="#" class="fa fa-bookmark-o"></a></li>
+                  <li><a href="#" class="fa fa-heart-o"><span>18</span></a></li>
+                  <li><a href="#" class="fa fa-comment-o"><span>900</span></a></li>
+                 </ul>
+              </div>
+              <div class="data">
+                <div class="content">
+                  <span class="author">Author: {{ blog.author }}</span>
+                  <h1 class="title"><a href="/blogs/{{ blog.slug }}">{{ blog.title }}</a></h1>
+<!--                  <p class="text">{{ blog.content }}</p>-->
+                  <a href="#" class="btn btn-primary">Read more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+  </div>
+
+
+
+
+
+<!--vertical line start-->
+<!--<div class="outer col-md-12">-->
+<!--  <div class="inner"></div>-->
+<!--</div>-->
+<!--vertical line end-->
+  </section>
+  {% include 'footer.html' %}
+    </section>
+</section>

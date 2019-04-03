@@ -1,0 +1,36 @@
+
+{% include 'header.html' %}
+
+<div class="col-md-12" align="center">
+<!--    <div class="col-form-label" style="background-color:LightGray" align="center">-->
+    <form action="" method="POST">
+        {% csrf_token %}
+        {% if is_correct_answer == True %}
+            <div class="alert alert-success">
+                Congratulations! Your answer is correct!
+                <br>{{ explanation }}
+            </div>
+        {% endif %}
+        {% if is_correct_answer == False %}
+            <div class="alert alert-danger">
+                Sorry Your Answer is not correct!
+            </div>
+        {% endif %}
+        <br>
+    <div>
+        <h2>{{ title }}</h2>
+        {{ form.as_p }}
+        <input type="Submit" name="submit" value="{% if is_correct_answer == True %}Next{% else %}Check Answer{% endif %}"/>
+    </div>
+    </form>
+</div>
+
+ <!--vertical line start-->
+
+<div class="outer col-md-12">
+  <div class="inner"></div>
+</div>
+  <!--vertical line end-->
+
+{% include 'footer.html' %}
+

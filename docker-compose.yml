@@ -1,0 +1,36 @@
+# Docker-compose.yml
+version: '3'
+services:
+  postgres_madzones:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: ""
+      POSTGRES_DB: "madzones_protfolio"
+
+    volumes:
+      - django-data:/var/lib/postgresql/data
+
+  django:
+    build: ./madzones/
+
+    volumes:
+      - ./madzones/:/usr/src/protfolio/madzones
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres_madzones
+    environment:
+      - DJANGO_DB_HOST=postgres_madzones
+      - DJANGO_DB_PORT=5433
+      - DJNAGO_SUPERUSER_NAME=chandip
+      - DJANGO_SUPERUSER_PASS=administrator
+      - DJANGO_SUPERUSER_MAIL=maskeyc@gmail.com
+      - DJANGO_SETTINGS_MODULE=madzones.settings
+
+volumes:
+  django-data:
+  madzones:
+

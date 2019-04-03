@@ -1,0 +1,32 @@
+{% include 'header.html' %}
+
+
+<div class="container">
+    <div class="col-md-12">
+        <h1>{{ course.title }}</h1>
+        <p>{{ course.content }}</p>
+
+
+        Child Pages
+        {% for childCourse in childCourses %}
+            <a href="">{{ childCourse.title }}
+        {% endfor %}
+
+                 <ul>
+   {% for course in coursesAll %}
+    <li>{{ course.title }}
+
+      {% if course.childs|length >= 1 %}
+       <ul class="submenu">
+        {% for child in course.childs %}
+          <li>{{ child.title }}</li>
+        {% endfor %}
+       </ul>
+      {% endif %}
+    </li>
+
+   {% endfor %}
+  </ul>
+    </div>
+</div>
+{% include 'footer.html' %}
