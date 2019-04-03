@@ -50,6 +50,9 @@
       <replace />
     </replaceStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -98,6 +101,7 @@
     <option name="width" value="1107" />
     <option name="height" value="1047" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -123,6 +127,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/madzones/blogs" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -179,16 +184,15 @@
       <workItem from="1553879679062" duration="4040000" />
       <workItem from="1554042854087" duration="15015000" />
       <workItem from="1554310115652" duration="202000" />
-      <workItem from="1554310348968" duration="4123000" />
+      <workItem from="1554310348968" duration="5121000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87214000" />
+    <option name="totallyTimeSpent" value="88212000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1107" height="1047" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.330468" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -203,8 +207,8 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50334287" side_tool="true" visible="true" weight="0.33369803" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4966571" visible="true" weight="0.33369803" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.6131805" side_tool="true" weight="0.33369803" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.38681948" visible="true" weight="0.33369803" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
