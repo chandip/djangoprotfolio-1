@@ -84,7 +84,7 @@ DATABASES = {
         'NAME': 'madzones_protfolio',
         'USER': 'postgres',
         'PASSWORD': 'administrator',
-        'HOST': '127.0.0.1',
+        'HOST': 'postgres_madzones',
         'PORT': '5432',
     }
 }
