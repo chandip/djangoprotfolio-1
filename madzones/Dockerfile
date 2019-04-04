@@ -6,7 +6,7 @@ ENV DOCKERIZE_VERSION="0.1.0" \
     PYTHONUNBUFFERED="1" \
     DJANGO_DB_HOST="madzones_protfolio" \
     DJANGO_DB_PORT="5432" \
-    DJNAGO_SUPERUSER_NAME="chandip" \
+    DJANGO_SUPERUSER_NAME="chandip" \
     DJANGO_SUPERUSER_MAIL="maskeyc@gmail.com" \
     DJANGO_SUPERUSER_PASS="administrator"
 
@@ -23,15 +23,23 @@ COPY requirements.txt /usr/src/protfolio/
 
 COPY . /usr/src/protfolio/madzones/
 
-RUN pip install -r /usr/src/protfolio/requirements.txt
+RUN pip install -r /usr/src/protfolio/madzones/requirements.txt
 
-CMD ["python", "manage.py", "migrate"]
+#CMD ["python", "manage.py", "makemigrations"]
 
-EXPOSE 8000
+#CMD ["python", "manage.py", "makemigrations blogs courses pages quizes"]
 
-RUN chmod +x entrypoint.sh
+#CMD ["python", "manage.py", "migrate"]
+
+
+
+RUN chmod +x /usr/src/protfolio/madzones/entrypoint.sh
 
 ENTRYPOINT ["/usr/src/protfolio/madzones/entrypoint.sh"]
+
+#CMD ["python", "manage.py", "migrate"]
+
+EXPOSE 8000
 
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
 

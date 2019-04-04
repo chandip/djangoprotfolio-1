@@ -7,7 +7,7 @@ services:
       - "5432:5432"
     environment:
       POSTGRES_USER: "postgres"
-      POSTGRES_PASSWORD: ""
+      POSTGRES_PASSWORD: "administrator"
       POSTGRES_DB: "madzones_protfolio"
 
     volumes:
@@ -24,8 +24,8 @@ services:
       - postgres_madzones
     environment:
       - DJANGO_DB_HOST=postgres_madzones
-      - DJANGO_DB_PORT=5433
-      - DJNAGO_SUPERUSER_NAME=chandip
+      - DJANGO_DB_PORT=5432
+      - DJANGO_SUPERUSER_NAME=chandip
       - DJANGO_SUPERUSER_PASS=administrator
       - DJANGO_SUPERUSER_MAIL=maskeyc@gmail.com
       - DJANGO_SETTINGS_MODULE=madzones.settings
