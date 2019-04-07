@@ -5,10 +5,10 @@ LABEL maintainer="maskeyc@gmail.com"
 ENV DOCKERIZE_VERSION="0.1.0" \
     PYTHONUNBUFFERED="1" \
     DJANGO_DB_HOST="madzones_protfolio" \
-    DJANGO_DB_PORT="5432" \
-    DJANGO_SUPERUSER_NAME="chandip" \
-    DJANGO_SUPERUSER_MAIL="maskeyc@gmail.com" \
-    DJANGO_SUPERUSER_PASS="administrator"
+    DJANGO_DB_PORT="5433"
+#    DJANGO_SUPERUSER_NAME="chandip" \
+#    DJANGO_SUPERUSER_MAIL="maskeyc@gmail.com" \
+#    DJANGO_SUPERUSER_PASS="administrator"
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \

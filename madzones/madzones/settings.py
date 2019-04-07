@@ -83,9 +83,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'madzones_protfolio',
         'USER': 'postgres',
-        'PASSWORD': 'administrator',
-        'HOST': 'postgres_madzones',
-        'PORT': '5432',
+        'PASSWORD': 'Vicecity@1005',
+        'HOST': 'localhost',
+        'PORT': '5433',
     }
 }
 

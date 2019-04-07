@@ -42,9 +42,10 @@
   <section class="main-container leftsymbolbg">
      <!--services-->
     <div class="container-fluid ">
-      <div class="padding">
+      <div class="padding courses-wrapper">
+        <div class="row">
         {% for course in courses %}
-            <div class="col-md-2 col-sm-6">
+            <div class="col-lg-3 col-md-2 col-sm-6 col-12 course-block">
               <div class="speciality-block-pic card-img-overlay idontknow">
                 <img src="/media/{{ course.image }}" height="50" width="50"/>
               </div>
@@ -56,13 +57,16 @@
             </div>
         {% endfor %}
       </div>
+      </div>
     </div>
 
-<!--vertical line start-->
+<!--Horizontal line start-->
 <div class="outer col-md-12">
   <div class="inner"></div>
 </div>
-<!--vertical line end-->
+<!--Horizontal line end-->
+
+
 <section id="blogs">
     <div class="container">
       <div class="row">
@@ -82,22 +86,22 @@
   <div class="container">
     <div class="row">
         {% for blog in blogs %}
-          <div class="blogview-2 card col-md-4">
-            <div class="wrapper" style="background-image: url('/media/{{ blog.image }}')">
-              <div class="header">
-                <div class="date">
+          <div class="blogview-2 card col-sm-6 col-12 col-lg-3 col-md-6 col-12">
+            <div class="wrapper blog-block" style="  webk: grey; background-image: url('/media/{{ blog.image }}')">
+              <div class="gbg"></div>
+               <div class="date">
                   <span class="day">{{ blog.date_posted }}</span>
-                  <span class="month">{{ blog.date_posted }}</span>
-                  <span class="year">{{ blog.date_posted }}</span>
                 </div>
+              <div class="data">
+                <div class="content">
+                    <div class="header">
+
                 <ul class="menu-content">
                   <li><a href="#" class="fa fa-bookmark-o"></a></li>
                   <li><a href="#" class="fa fa-heart-o"><span>18</span></a></li>
                   <li><a href="#" class="fa fa-comment-o"><span>900</span></a></li>
                  </ul>
               </div>
-              <div class="data">
-                <div class="content">
                   <span class="author">Author: {{ blog.author }}</span>
                   <h1 class="title"><a href="/blogs/{{ blog.slug }}">{{ blog.title }}</a></h1>
 <!--                  <p class="text">{{ blog.content }}</p>-->

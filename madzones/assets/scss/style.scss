@@ -115,13 +115,16 @@ sans-serif;
       font-weight: 700;
       font-size: 24px;
       text-shadow: 2px 3px 2px rgba($black, 0.18);
+      color: white;
     }
     .month {
       text-transform: uppercase;
+      color: white;
     }
     .month,
     .year {
       font-size: 12px;
+      color: white;
     }
   }
   .content {
