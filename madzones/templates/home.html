@@ -87,7 +87,7 @@
     <div class="row">
         {% for blog in blogs %}
           <div class="blogview-2 card col-sm-6 col-12 col-lg-3 col-md-6 col-12">
-            <div class="wrapper blog-block" style="  webk: grey; background-image: url('/media/{{ blog.image }}')">
+            <div class="wrapper blog-block" style="  background-image: url('/media/{{ blog.image }}')">
               <div class="gbg"></div>
                <div class="date">
                   <span class="day">{{ blog.date_posted }}</span>
@@ -107,10 +107,14 @@
 <!--                  <p class="text">{{ blog.content }}</p>-->
                   <a href="#" class="btn btn-primary">Read more</a>
                 </div>
+
               </div>
             </div>
           </div>
         {% endfor %}
+<div class="wrapper">
+      <a href="#" class="btn btn-primary">Read All Blogs</a>
+</div>
       </div>
   </div>
 
