@@ -11,19 +11,19 @@ img {
         {% for blog in blogs %}
             <div class=" col-12 course-block">
               <div class="speciality-block">
+                  <div class="image-blogs">
                   <img src="/media/{{ blog.image }}" height="159" width="238"/>
-                  <h4>{{ blog.title }}</h4>
-                    <a href="#" class="fa"><span>{{ blog.author }}</span></a>
+                  </div>
+                  <h4>{{ blog.title | title }}</h4>
+                    <a href="#" class="fa"><span>{{ blog.author | title }}</span></a>
                     -
                     <a href="#" class="fa"><span>{{ blog.date_posted }}</span></a>
-                <p>{{ blog.content|safe }}</p>
+                    <p>{{ blog.content|safe|title }}</p>
                 <a href="/courses/{{ course.slug }}" class="btn btn-primary">Read Article</a>
               </div>
             </div>
         {% endfor %}
-      </div>
         </div>
       </div>
-    </div>
-
+</div>
 {% include 'footer.html' %}

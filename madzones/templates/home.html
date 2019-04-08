@@ -57,6 +57,10 @@
             </div>
         {% endfor %}
       </div>
+        <div class="wrapper">
+        <a href="http://localhost:8000/blogs" class="btn btn-danger">All courses Here</a>
+      </div>
+      <br />
       </div>
     </div>
 
@@ -87,7 +91,7 @@
     <div class="row">
         {% for blog in blogs %}
           <div class="blogview-2 card col-sm-6 col-12 col-lg-3 col-md-6 col-12">
-            <div class="wrapper blog-block" style="  background-image: url('/media/{{ blog.image }}')">
+            <div class="wrapper blog-block" style="background-image: url('/media/{{ blog.image }}')" >
               <div class="gbg"></div>
                <div class="date">
                   <span class="day">{{ blog.date_posted }}</span>
@@ -102,31 +106,20 @@
                   <li><a href="#" class="fa fa-comment-o"><span>900</span></a></li>
                  </ul>
               </div>
-                  <span class="author">Author: {{ blog.author }}</span>
-                  <h1 class="title"><a href="/blogs/{{ blog.slug }}">{{ blog.title }}</a></h1>
-<!--                  <p class="text">{{ blog.content }}</p>-->
+                  <span class="author">Author: {{ blog.author | title }}</span>
+                  <h1 class="title"><a href="/blogs/{{ blog.slug }}">{{ blog.title | title }}</a></h1>
                   <a href="#" class="btn btn-primary">Read more</a>
                 </div>
-
               </div>
             </div>
           </div>
-        {% endfor %}
-<div class="wrapper">
-      <a href="#" class="btn btn-primary">Read All Blogs</a>
-</div>
-      </div>
+      {% endfor %}
+
+    </div>
+    <div class="wrapper">
+      <a href="http://localhost:8000/blogs" class="btn btn-danger">Read All Blogs</a>
+    </div>
   </div>
-
-
-
-
-
-<!--vertical line start-->
-<!--<div class="outer col-md-12">-->
-<!--  <div class="inner"></div>-->
-<!--</div>-->
-<!--vertical line end-->
   </section>
   {% include 'footer.html' %}
     </section>
