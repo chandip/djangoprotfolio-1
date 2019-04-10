@@ -476,13 +476,20 @@ nav ul li a:hover::after{
 }
 
 /*nav bar ends*/
-
+a:hover {
+    text-decoration: none;
+}
 
 .word span{
     position: absolute;
     overflow: hidden;
     animation: animate 10s linear infinite;
     opacity: 0;
+    color: crimson;
+}
+
+.chandip .normal-text {
+    display: inline;
     color: crimson;
 }
 
