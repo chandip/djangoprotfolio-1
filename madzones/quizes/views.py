@@ -1,10 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-from quizes.forms import QuizForm
+from madzones.quizes.forms import QuizForm
 from .models import Quiz
-from courses.models import Course
-from pages.models import Page
+from madzones.courses.models import Course
+from madzones.pages.models import Page
 
 
 # Create your views here.

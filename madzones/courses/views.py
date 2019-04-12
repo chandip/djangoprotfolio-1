@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Course
 from django.views import View
-from pages.models import Page
+from madzones.pages.models import Page
 # Create your views here.
 def course_view(request, *args, **kwargs): # *args, **kwargs
     print(args, kwargs)

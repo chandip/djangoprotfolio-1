@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from courses.models import Course
-from pages.models import Page
-from blogs.models import Blog
+from madzones.courses.models import Course
+from madzones.pages.models import Page
+from madzones.blogs.models import Blog
 
 
 # Create your views here.
