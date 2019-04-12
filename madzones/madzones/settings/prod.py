@@ -8,7 +8,7 @@ MEDIA_URL = '/media/'
 
 SECRET_KEY = "asdfasefsdfef3323654DDDcdsaESDG2"
 
-ALLOWED_HOSTs = [
+ALLOWED_HOSTS = [
     "127.0.0.1:8000"
     "127.0.0.1"
 ]
