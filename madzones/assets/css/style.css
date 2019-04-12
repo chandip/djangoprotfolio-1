@@ -538,3 +538,36 @@ a:hover {
     animation-delay: 8s;
 }
 
+/*navbar ends*/
+
+.quiz-background {
+    background: snow;
+    padding: 80px;
+}
+
+.quiz-choices {
+    padding: 20px;
+     border: 1px solid green;
+}
+
+
+ul#id_choices li {
+    border: 1px solid #b5b3b3;
+    width: 100%;
+    display: inline-block;
+    margin: 5px 0px;
+    border-radius: 8px;
+    padding: 8px 10px 0px;
+    cursor: pointer;
+}
+
+ul#id_choices {
+    margin: 0;
+    padding: 0;
+}
+
+ul#id_choices li:hover {
+    background: #e6e5e5;
+    transition: 0.1s all ease-in;
+}
+

@@ -51,7 +51,7 @@
               </div>
               <div class="speciality-block">
                 <h4>{{ course.title }}</h4>
-                <p>{{ course.content|safe }}</p>
+                <p>{{ course.content|truncatechars:250 }}</p>
                 <a href="/courses/{{ course.slug }}" class="btn btn-primary">Learn More</a>
               </div>
             </div>
@@ -117,7 +117,7 @@
 
     </div>
     <div class="wrapper">
-      <a href="http://localhost:8000/blogs" class="btn btn-danger">Read All Blogs</a>
+      <a href="/blogs" class="btn btn-danger">Read All Blogs</a>
     </div>
   </div>
   </section>

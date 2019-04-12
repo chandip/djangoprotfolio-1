@@ -1,4 +1,6 @@
 from django.db import models
+from multiselectfield import MultiSelectField
+from django.db.models import Count
 
 class Quiz(models.Model):
     question = models.TextField(max_length=1000,default="")
@@ -13,7 +15,7 @@ class Quiz(models.Model):
         (3, 'Option 3'),
         (4, 'Option 4'),
     )
-    correct_answer = models.IntegerField(choices = answer_choices)
+    correct_answer = MultiSelectField(choices = answer_choices)
 
     def __unicode__(self):
         return self.question

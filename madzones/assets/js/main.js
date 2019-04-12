@@ -38,4 +38,50 @@ $(document).ready(function() {
     });
     //when clicked on mobile-menu, normal menu is shown as a list, classic rwd menu story (thanks mwl from stackoverflow)
 
+
+    // check quiz option
+    $('#id_choices li').on('click', function(){
+        const _this = $(this);
+        const radioBtn = _this.find('input[type=radio],input[type=checkbox]');
+        const checked = radioBtn.is(':checked');
+        const limitChoices = 2;
+        const count = $('#id_choices').find('input[type=checkbox]:checked').length;
+
+        if(checked)
+        {
+            radioBtn.prop('checked', false)
+        }
+        else{
+            //only allow 2 selection of checkbox
+            if(count >= limitChoices) {
+                _this.find('input[type=checkbox]').checked = false;
+
+            }
+            else{
+                 radioBtn.prop('checked', true)
+            }
+        }
+    });
+
+    $(('input[type=radio],input[type=checkbox]')).on('click', function(){
+       const checked = $(this).is(':checked');
+       const limitChoices = 2;
+        const count = $('#id_choices').find('input[type=checkbox]:checked').length;
+
+        if(checked)
+        {
+            this.checked = false;
+        }
+        else{
+            //only allow 2 selection of checkbox
+            if(count >= limitChoices) {
+               this.checked = false;
+
+            }
+            else{
+                 this.checked = true;
+            }
+        }
+    })
+
 });

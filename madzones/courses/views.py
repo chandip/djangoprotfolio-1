@@ -18,7 +18,6 @@ def course_view(request, *args, **kwargs): # *args, **kwargs
     return render(request, "courses/index.html", context)
 
 
-
 def course_single_view(request, slug): # *args, **kwargs
     # print(args, kwargs)
     course = Course.objects.get(slug = slug)
@@ -30,4 +29,19 @@ def course_single_view(request, slug): # *args, **kwargs
     # return HttpResponse(course)
     # return HttpResponse("<h1>Hello World</h1>") # string of HTML code
     return render(request, "courses/single.html", context)
+
+
+def course_child_single_view(request, slug, childSlug): # *args, **kwargs
+    # print(args, kwargs)
+    course = Course.objects.get(slug = childSlug)
+    childCourses = Course.objects.filter(parent = course)
+    context = {
+        'course': course,
+        'childCourses': childCourses
+    }
+    # return HttpResponse(course)
+    # return HttpResponse("<h1>Hello World</h1>") # string of HTML code
+    return render(request, "courses/single.html", context)
+
+
 

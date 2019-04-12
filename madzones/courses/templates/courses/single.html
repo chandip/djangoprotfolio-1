@@ -4,12 +4,13 @@
 <div class="container">
     <div class="col-md-12">
         <h1>{{ course.title }}</h1>
-        <p>{{ course.content }}</p>
+        <p>{{ course.content|truncatechars:9 }}</p>
 
 
         Child Pages
         {% for childCourse in childCourses %}
-            <a href="">{{ childCourse.title }}
+            <a href="/courses/{{ course.slug }}/{{ childCourse.slug }}">{{ childCourse.title }} <br></a>
+                {{ childCourse.slug }}
         {% endfor %}
 
                  <ul>
@@ -27,6 +28,7 @@
 
    {% endfor %}
   </ul>
+
     </div>
 </div>
 {% include 'footer.html' %}
