@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from madzones.courses.models import Course
-from madzones.pages.models import Page
-from madzones.blogs.models import Blog
+from courses.models import Course
+from pages.models import Page
+from blogs.models import Blog
 
 
 # Create your views here.
@@ -27,6 +27,6 @@ def frontend_view(request, *args, **kwargs): # *args, **kwargs
 
     }
     # return HttpResponse(course)
-    # return HttpResponse("<h1>Hello World</h1>") # string of HTML code
-    return render(request, "home.html", context)
+    return HttpResponse("<h1>Hello World</h1>") # string of HTML code
+    #return render(request, "home.html", context)
 

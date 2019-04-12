@@ -17,13 +17,13 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
-from madzones.frontend.views import frontend_view
-from madzones.courses.views import course_single_view
-from madzones.courses.views import course_child_single_view
-from madzones.courses.views import course_view
-from madzones.quizes.views import quiz_view
-from madzones.blogs.views import blog_single_view
-from madzones.blogs.views import blog_view
+from frontend.views import frontend_view
+from courses.views import course_single_view
+from courses.views import course_child_single_view
+from courses.views import course_view
+from quizes.views import quiz_view
+from blogs.views import blog_single_view
+from blogs.views import blog_view
 
 
 urlpatterns = [

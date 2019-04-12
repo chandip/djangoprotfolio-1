@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-from madzones.quizes.forms import QuizForm
+from quizes.forms import QuizForm
 from .models import Quiz
 from madzones.courses.models import Course
 from madzones.pages.models import Page
