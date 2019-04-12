@@ -30,7 +30,17 @@ services:
       - DJANGO_SUPERUSER_MAIL=maskeyc@gmail.com
       - DJANGO_SETTINGS_MODULE=madzones.settings
 
+    nginx:
+      build: ./ngnix
+      volumes:
+        - static_volume:/usr/src/app/staticfiles
+      ports:
+        - 1377:80
+      depends_on:
+        - postgres_madzones
+
 volumes:
   django-data:
   madzones:
+  statuc_volume:
 

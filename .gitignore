@@ -1,0 +1,10 @@
+.idea/
+db.sqlite3
+venv/
+.DS_Store
+__pycache__/
+madzones/madzones/settings/prod.py
+madzones/madzones/debug.log
+madzones/Dockerfile
+madzones/entrypoint.sh
+docker-compose.yml

@@ -80,12 +80,12 @@ WSGI_APPLICATION = 'madzones.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'madzones_protfolio',
-        'USER': 'postgres',
-        'PASSWORD': 'Vicecity@1005',
-        'HOST': 'localhost',
-        'PORT': '5433',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'madzones',
+        'USER': 'madzones',
+        'PASSWORD': 'madzones',
+        'HOST': 'postgres',
+        'PORT': '5432',
     }
 }
 
@@ -133,5 +133,6 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_URL = '/assets/'
+STATIC_ROOT = "/static_files"
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
