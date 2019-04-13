@@ -5,9 +5,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 DEBUG = False
 
-STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static")
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_files")
 
-STATIC_URL = "/static/"
+STATIC_URL = "/assets/"
 # STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR, "assets"))
 # BASE_DIR is where manage.py lives. above code goes one step up the manage.py
 
