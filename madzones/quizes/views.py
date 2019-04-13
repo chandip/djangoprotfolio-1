@@ -3,8 +3,8 @@ from django.http import HttpResponse
 
 from quizes.forms import QuizForm
 from .models import Quiz
-from madzones.courses.models import Course
-from madzones.pages.models import Page
+from courses.models import Course
+from pages.models import Page
 
 
 # Create your views here.

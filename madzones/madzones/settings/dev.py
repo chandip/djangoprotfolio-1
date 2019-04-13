@@ -1,4 +1,4 @@
-from madzones.madzones.settings.base import *
+from madzones.settings.base import *
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'r=eer7-^m5dwmg9^9bs6)8%y+!n-n4kzf%cn#mk0mhcj5gg=x@'
