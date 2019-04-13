@@ -5,11 +5,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 DEBUG = False
 
-STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static")
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_cdn")
 # STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR, "assets"))
 # BASE_DIR is where manage.py lives. above code goes one step up the manage.py
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media_cdn")
 
 
 SECRET_KEY = "asdfasefsdfef3323654DDDcdsaESDG2"

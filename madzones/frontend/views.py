@@ -27,6 +27,6 @@ def frontend_view(request, *args, **kwargs): # *args, **kwargs
 
     }
     # return HttpResponse(course)
-    return HttpResponse("<h1>Hello World</h1>") # string of HTML code
-    #return render(request, "home.html", context)
+    #return HttpResponse("<h1>Hello World</h1>") # string of HTML code
+    return render(request, "home.html", context)
 
