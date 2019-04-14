@@ -132,10 +132,11 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_files")
+#copy all static files into STATIC_ROOT
 
 STATIC_URL = '/assets/'
-MEDIA_URL = '/media/'
 
+MEDIA_URL = '/media/'
 
 ## Logging configuration
 LOGGING = {
