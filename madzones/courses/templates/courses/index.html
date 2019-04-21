@@ -1,5 +1,29 @@
 {% include 'header.html' %}
-main course page
-
-
+<style>
+img {
+    float: left;
+    padding: inherit;
+}
+</style>
+<div class="container-fluid ">
+      <div class="blogs-view ">
+        <div class="row">
+        {% for course in courses %}
+            <div class=" col-12 course-block">
+              <div class="speciality-block">
+                  <div class="image-blogs">
+                  <img src="/media/{{ course.image }}" height="159" width="238"/>
+                  </div>
+                  <h4>{{ course.title | title }}</h4>
+                    <a href="#" class="fa"><span>{{ course.author | title }}</span></a>
+                    -
+                    <a href="#" class="fa"><span>{{ course.date_posted }}</span></a>
+                    <p>{{ course.content|safe|title }}</p>
+                <a href="/courses/{{ course.slug }}" class="btn btn-primary">Read Article</a>
+              </div>
+            </div>
+        {% endfor %}
+        </div>
+      </div>
+</div>
 {% include 'footer.html' %}
