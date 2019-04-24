@@ -100,15 +100,15 @@
                 <div class="content">
                     <div class="header">
 
-                <ul class="menu-content">
+               <!-- <ul class="menu-content">
                   <li><a href="#" class="fa fa-bookmark-o"></a></li>
                   <li><a href="#" class="fa fa-heart-o"><span>18</span></a></li>
                   <li><a href="#" class="fa fa-comment-o"><span>900</span></a></li>
-                 </ul>
+                 </ul>-->
               </div>
                   <span class="author">Author: {{ blog.author | title }}</span>
-                  <h1 class="title"><a href="/blogs/{{ blog.slug }}">{{ blog.title | title }}</a></h1>
-                  <a href="#" class="btn btn-primary">Read more</a>
+                  <h1 class="title"><a href="/blogs/{{ blog.slug }}">{{ blog.title | title | truncatechars:35 }}</a></h1>
+                  <a href="/blogs/{{ blog.slug }}" class="btn btn-primary">Read more</a>
                 </div>
               </div>
             </div>
