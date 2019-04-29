@@ -4,6 +4,7 @@ venv/
 .DS_Store
 __pycache__/
 madzones/madzones/settings/prod.py
+madzones/madzones/settings/base.py
 madzones/madzones/debug.log
 madzones/madzones/blogs/migrations/
 madzones/madzones/courses/migrations/
