@@ -6,7 +6,7 @@ from django.template.defaultfilters import slugify
 
 
 class Blog(models.Model):
-    title = models.CharField(max_length=255)
+    title = models.CharField(max_length=255, blank = True)
     slug = models.SlugField(max_length=255, unique=True, blank = True)
     content = models.TextField(blank=True)
     #author = models.ForeignKey(User, on_delete=models.CASCADE, blank=True)

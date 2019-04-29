@@ -6,8 +6,8 @@ from mptt.models import MPTTModel, TreeForeignKey
 
 
 class Course(MPTTModel):
-    id = models.AutoField(primary_key=True)
-    title = models.CharField(max_length=255)
+    id = models.AutoField(primary_key=True, blank=True)
+    title = models.CharField(max_length=255, blank=True)
     slug = models.SlugField(max_length=255, unique=True, blank=True)
     short_description = models.TextField(max_length=1000, blank=True)
     content = models.TextField(blank=True)
