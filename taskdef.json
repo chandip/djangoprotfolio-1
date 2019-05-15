@@ -3,7 +3,7 @@
     "containerDefinitions": [
         {
             "name": "container-django-dev",
-            "image": "nginx",
+            "image": "<IMAGE_NAME>",
             "essential": true,
             "portMappings": [
                 {

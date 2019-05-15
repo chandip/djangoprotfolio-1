@@ -16,9 +16,9 @@ phases:
       - echo "development build"
       - ls -al
       - cd mysite
-      - pip install virtualenv
-      - virtualenv venv
-      - docker build -t $REPOSITORY_URI:$IMAGE_TAG -t $REPOSITORY_URI:latest -f Dockerfile .
+      #- pip install virtualenv
+      #- virtualenv venv
+      - docker build -t $REPOSITORY_URI:$IMAGE_TAG -t $REPOSITORY_URI:latest -f /docker/prod/Dockerfile .
   post_build:
     commands:
       - ok && echo Build completed on `date`
