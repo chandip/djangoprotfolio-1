@@ -17,13 +17,13 @@ phases:
       - ls -al
       #- pip install virtualenv
       #- virtualenv venv
-      - docker build --build-arg DB_HOST=$DB_HOST --build-arg DB_NAME=$DB_NAME --build-arg DB_USER=$DB_USER --build-arg DB_PASS=$DB_PASS --build-arg DB_PORT=$DB_PORT -t py-test -f docker/prod/python/Dockerfile .
+      - docker build --build-arg DB_HOST=$DB_HOST --build-arg DB_NAME=$DB_NAME --build-arg DB_USER=$DB_USER --build-arg DB_PASS=$DB_PASS --build-arg DB_PORT=$DB_PORT -t $REPOSITORY_URI:$IMAGE_TAG -t $REPOSITORY_URI:latest -t py-test -f docker/prod/python/Dockerfile .
   post_build:
     commands:
       - ok && echo Build completed on `date`
-      - apt update && apt install zip jq -y
-      - docker push $REPOSITORY_URI:latest
+      - apt update && apt install jq -y
       - docker push $REPOSITORY_URI:$IMAGE_TAG
+      - docker push $REPOSITORY_URI:latest
       - IMAGE_PLACEHOLDER="<IMAGE_NAME>"
       - sed -i 's@'"$IMAGE_PLACEHOLDER"'@'"$REPOSITORY_URI"':latest@g' taskdef.json
       - CONTAINER_DEFINITION_FILE=$(cat taskdef.json)
@@ -47,4 +47,3 @@ phases:
 artifacts:
   files:
     - "**/*.py"
-
