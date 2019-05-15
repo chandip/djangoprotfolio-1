@@ -15,7 +15,6 @@ phases:
       - ok && echo Build started on `date`
       - echo "development build"
       - ls -al
-      - cd mysite
       #- pip install virtualenv
       #- virtualenv venv
       - docker build --build-arg DB_HOST=$DB_HOST --build-arg DB_NAME=$DB_NAME --build-arg DB_USER=$DB_USER --build-arg DB_PASS=$DB_PASS --build-arg DB_PORT=$DB_PORT -t py-test -f docker/prod/python/Dockerfile .
