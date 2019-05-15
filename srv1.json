@@ -1,0 +1,30 @@
+{
+  "serviceName": "service-django-7",
+  "taskDefinition": "taskdef-django-dev:7",
+  "cluster": "django-cluster",
+  "loadBalancers": [
+    {
+      "targetGroupArn": "arn:aws:elasticloadbalancing:us-east-2:643180173367:targetgroup/Django-Target/ab8976e673e4d56c",
+      "containerName": "container-django-dev",
+      "containerPort": 80
+    }
+  ],
+  "desiredCount": 1,
+  "launchType": "FARGATE",
+  "schedulingStrategy": "REPLICA",
+  "deploymentController": {
+    "type": "ECS"
+  },
+  "networkConfiguration": {
+    "awsvpcConfiguration": {
+      "subnets": [
+        "subnet-123a067a"
+      ],
+      "securityGroups": [
+        "sg-0607b55f567a258e1"
+      ],
+      "assignPublicIp": "ENABLED"
+    }
+  }
+}
+

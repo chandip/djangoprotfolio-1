@@ -1,0 +1,37 @@
+{
+    "executionRoleArn": "arn:aws:iam::643180173367:role/ecs-task-exec-role",
+    "containerDefinitions": [
+        {
+            "name": "container-django-dev",
+            "image": "nginx",
+            "essential": true,
+            "portMappings": [
+                {
+                    "hostPort": 80,
+                    "protocol": "tcp",
+                    "containerPort": 80
+                }
+            ],
+            "environment": [
+            ],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "/ecs/django/development",
+                    "awslogs-region": "us-east-2",
+                    "awslogs-stream-prefix": "log"
+                }
+            }
+        }
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "networkMode": "awsvpc",
+    "cpu": "512",
+    "memory": "1024",
+    "family": "taskdef-django-dev"
+}
+
+
+
