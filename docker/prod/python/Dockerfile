@@ -25,4 +25,4 @@ RUN python manage.py makemigrations blogs courses pages quizes && python manage.
 
 RUN chmod +x /entrypoint.sh
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["sh", "-c", "/entrypoint.sh"]
