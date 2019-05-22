@@ -2,6 +2,9 @@ version: 0.2
 runtime-versions: 3.x
 
 phases:
+  install:
+    runtime-versions:
+      python: 3.7
   pre_build:
     commands:
       # `ok` try 6 script for running post build only when build succeeded
