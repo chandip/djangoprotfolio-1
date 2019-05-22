@@ -1,5 +1,5 @@
 version: 0.2
-
+runtime-versions: 3.x
 
 phases:
   pre_build:
