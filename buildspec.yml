@@ -20,7 +20,7 @@ phases:
       - ls -al
       #- pip install virtualenv
       #- virtualenv venv
-      - docker build --build-arg DB_HOST=$DB_HOST --build-arg DB_NAME=$DB_NAME --build-arg DB_USER=$DB_USER --build-arg DB_PASS=$DB_PASS --build-arg DB_PORT=$DB_PORT -t $REPOSITORY_URI:$IMAGE_TAG -t $REPOSITORY_URI:latest -t py-test -f docker/prod/python/Dockerfile .
+      - docker build --build-arg DB_HOST=$DB_HOST --build-arg DB_NAME=$DB_NAME --build-arg DB_USER=$DB_USER --build-arg DB_PASS=$DB_PASS --build-arg DB_PORT=$DB_PORT --build-arg SUPER_USER=$SUPER_USER --build-arg SUPER_EMAIL=$SUPER_EMAIL --build-arg SUPER_PASS=$SUPER_PASS -t $REPOSITORY_URI:$IMAGE_TAG -t $REPOSITORY_URI:latest -t py-test -f docker/prod/python/Dockerfile .
   post_build:
     commands:
       - ok && echo Build completed on `date`
