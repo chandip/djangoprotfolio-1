@@ -11,3 +11,4 @@ madzones/quizes/migrations/
 madzones/Dockerfile
 madzones/entrypoint.sh
 docker-compose.yml
+.gitignore
